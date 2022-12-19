@@ -1,0 +1,1136 @@
+Output Root file:
+output_full_Z_mc.root
+DEBUG 2022-03-02 16:33:43.028 UTC: 	 CRAB Client version: v3.220210
+DEBUG 2022-03-02 16:33:43.029 UTC: 	 Running on: Linux lxplus737.cern.ch 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2022-03-02 16:33:43.029 UTC: 	 Executing command: 'submit'
+DEBUG 2022-03-02 16:33:43.030 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bdanzi/.crab3
+DEBUG 2022-03-02 16:33:43.032 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2022-03-02 16:33:43.124 UTC: 	 Checking credentials
+DEBUG 2022-03-02 16:33:43.124 UTC: 	 Found proxy file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:33:43.124 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2022-03-02 16:33:43.124 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:33:43.996 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:33:43.997 UTC: 	 Getting proxy life time left
+DEBUG 2022-03-02 16:33:43.997 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:33:45.029 UTC: 	 output : 686389
+686389
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:33:45.030 UTC: 	 Proxy valid for 190:39:49 hours
+DEBUG 2022-03-02 16:33:45.118 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2022-03-02 16:33:45.135 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlData9K4FEf --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=delegatedn" | tee /dev/stderr 
+DEBUG 2022-03-02 16:33:45.287 UTC: 	 output : {"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=delegatedn HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 22
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [22 bytes data]
+* upload completely sent off: 22 out of 22 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:33:45 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 213
+< Vary: Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "de92dcb56f87dabbe30965e60a433c3f1b873eab"
+< X-Rest-Time: 2091.169 us
+< CMS-Server-Time: D=88552 t=1646238825194633
+< 
+{ [5 bytes data]
+100   235  100   213  100    22   1789    184 --:--:-- --:--:-- --:--:--  1974
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:33:45.288 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2022-03-02 16:33:45.288 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:33:46.153 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:33:46.153 UTC: 	 Getting myproxy life time left for 574c355a865cf1e033f1abec02e1b33de079f03d
+DEBUG 2022-03-02 16:33:46.153 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 574c355a865cf1e033f1abec02e1b33de079f03d
+DEBUG 2022-03-02 16:33:46.460 UTC: 	 output : username: 574c355a865cf1e033f1abec02e1b33de079f03d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 691:41:25  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:33:46.461 UTC: 	 Myproxy is valid: 2490060
+DEBUG 2022-03-02 16:33:46.461 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 574c355a865cf1e033f1abec02e1b33de079f03d  - validity: 28 days, 19:41:00
+DEBUG 2022-03-02 16:33:46.461 UTC: 	 Command use: submit
+DEBUG 2022-03-02 16:33:46.461 UTC: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x7f9fb9ef1810>]
+DEBUG 2022-03-02 16:33:46.461 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2022-03-02 16:33:46.462 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlData4kUCQG --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=version" | tee /dev/stderr 
+DEBUG 2022-03-02 16:33:46.584 UTC: 	 output : {"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "py3.220218"]
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=version HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 19
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [19 bytes data]
+* upload completely sent off: 19 out of 19 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:33:46 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 73
+< Vary: Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "b9e9d953ebda03e57a376ab381078e87e4cd4aa3"
+< X-Rest-Time: 3001.690 us
+< CMS-Server-Time: D=14913 t=1646238826564062
+< 
+{ [5 bytes data]
+100    92  100    73  100    19   1403    365 --:--:-- --:--:-- --:--:--  1769
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "py3.220218"]
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 CRABClient version: v3.220210
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 Instance is prod
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 Command api workflow
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 Started submission
+DEBUG 2022-03-02 16:33:46.585 UTC: 	 Working on /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+DEBUG 2022-03-02 16:33:46.586 UTC: 	 Encoded data for curl request: subresource=backendurls
+DEBUG 2022-03-02 16:33:46.586 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlDataV6IGy5 --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=backendurls" | tee /dev/stderr 
+DEBUG 2022-03-02 16:33:46.694 UTC: 	 output : {"result": [
+ {"cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorSchedds": {"crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}, "crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}}, "asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=backendurls HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 23
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [23 bytes data]
+* upload completely sent off: 23 out of 23 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:33:46 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 2232
+< Vary: Accept-Encoding,Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "33581c872b594825cd6b153efac3e8632410185f"
+< X-Rest-Time: 5577.326 us
+< CMS-Server-Time: D=30580 t=1646238826657843
+< 
+{ [5 bytes data]
+100  2255  100  2232  100    23  30575    315 --:--:-- --:--:-- --:--:-- 30890
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"cacheSSL": "https://cmsweb.cern.ch/S3/crabcache_prod", "htcondorSchedds": {"crab3@vocms059.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/059", "weightfactor": 0}, "crab3@vocms068.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/068", "weightfactor": 1}, "crab3@vocms069.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/069", "weightfactor": 1}, "crab3@vocms0106.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0106", "weightfactor": 1}, "crab3@vocms0107.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0107", "weightfactor": 1}, "crab3@vocms0119.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0119", "weightfactor": 1}, "crab3@vocms0120.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0120", "weightfactor": 1}, "crab3@vocms0121.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0121", "weightfactor": 1}, "crab3@vocms0122.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0122", "weightfactor": 1}, "crab3@vocms0137.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0137", "weightfactor": 1}, "crab3@vocms0144.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0144", "weightfactor": 1}, "crab3@vocms0155.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0155", "weightfactor": 1}, "crab3@vocms0194.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0194", "weightfactor": 1}, "crab3@vocms0195.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0195", "weightfactor": 1}, "crab3@vocms0196.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0196", "weightfactor": 1}, "crab3@vocms0197.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0197", "weightfactor": 1}, "crab3@vocms0198.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0198", "weightfactor": 1}, "crab3@vocms0199.cern.ch": {"proxiedurl": "https://cmsweb.cern.ch:8443/scheddmon/0199", "weightfactor": 1}}, "asoConfig": [{"couchURL": "https://cmsweb.cern.ch/crabserver/prod", "couchDBName": "filetransfers"}], "htcondorPool": "cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:33:46.750 UTC: 	 Loading required information from the environment
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 Found CMSSW_10_6_18 for slc7_amd64_gcc820 with base /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 Loading required information from the environment
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 Found CMSSW_10_6_18 for slc7_amd64_gcc820 with base /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 UNIQUE NAME: tarUUID 6ff09785-a2c2-42ee-b6cd-a555c777a37d 
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'TagProbe'
+config.General.requestName = 'TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph'
+config.section_('JobType')
+config.JobType.psetName = '/afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/test/run_muonAnalyzer_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.numCores = 1
+config.JobType.allowUndistributedCMSSW = True
+config.JobType.pyCfgParams = ['resonance=Z', 'isFullAOD=True', 'isMC=True', 'globalTag=106X_upgrade2018_realistic_v15_L1v1', 'numThreads=1', 'era=Run2018', 'includeJets=False', 'fromCRAB=True']
+config.section_('Data')
+config.Data.inputDataset = '/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1/AODSIM'
+config.Data.allowNonValidInputDataset = True
+config.Data.publication = False
+config.Data.unitsPerJob = 100
+config.Data.splitting = 'LumiBased'
+config.Data.lumiMask = ''
+config.Data.outLFNDirBase = '/store/user/bdanzi/TnP_ntuples/muon/Z/Run2018/AOD'
+config.section_('Site')
+config.Site.storageSite = 'T2_IT_Bari'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 self.config.JobType.psetName: /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/test/run_muonAnalyzer_cfg.py
+INFO 2022-03-02 16:33:46.751 UTC: 	 Importing CMSSW configuration /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/test/run_muonAnalyzer_cfg.py
+DEBUG 2022-03-02 16:33:46.751 UTC: 	 Additional parameters for the CMSSW configuration are: ['resonance=Z', 'isFullAOD=True', 'isMC=True', 'globalTag=106X_upgrade2018_realistic_v15_L1v1', 'numThreads=1', 'era=Run2018', 'includeJets=False', 'fromCRAB=True']
+INFO 2022-03-02 16:33:54.594 UTC: 	 Finished importing CMSSW configuration /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/test/run_muonAnalyzer_cfg.py
+DEBUG 2022-03-02 16:33:54.595 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/PSet.py
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 The following TFile output files will be collected: ['output_full_Z_mc.root']
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 Loading required information from the environment
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 Found CMSSW_10_6_18 for slc7_amd64_gcc820 with base /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18
+DEBUG 2022-03-02 16:33:58.286 UTC: 	 Making tarball in /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/6ff09785-a2c2-42ee-b6cd-a555c777a37ddefault.tgz
+DEBUG 2022-03-02 16:33:58.288 UTC: 	 Checking directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/lib
+DEBUG 2022-03-02 16:33:58.288 UTC: 	 Adding directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/lib to tarball
+DEBUG 2022-03-02 16:33:58.402 UTC: 	 Checking directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/biglib
+DEBUG 2022-03-02 16:33:58.402 UTC: 	 Adding directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/biglib to tarball
+DEBUG 2022-03-02 16:33:58.402 UTC: 	 Checking directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/module
+DEBUG 2022-03-02 16:33:58.415 UTC: 	 Adding data directory /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/data to tarball
+DEBUG 2022-03-02 16:33:59.582 UTC: 	 Uploading archive /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/6ff09785-a2c2-42ee-b6cd-a555c777a37ddefault.tgz (1.213867.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2022-03-02 16:34:00.181 UTC: 	 Encoded data for curl request: tarballname=e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2022-03-02 16:34:00.181 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlDataok9KTh --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/cache?tarballname=e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz&subresource=upload&objecttype=sandbox" | tee /dev/stderr 
+DEBUG 2022-03-02 16:34:00.302 UTC: 	 output : {"result": [
+ "https://s3.cern.ch/crabcache_prod"
+,{"key": "bdanzi/sandboxes/e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz", "AWSAccessKeyId": "d542228b5cc74605885bd10e80fe3e8f", "policy": "eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDBaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy9lMjkyYmU1MDlkOTI3NDUwZWFjNjY1YzZjNmVhZGNkOWNiODY1MDA2NjEwNjljMDVjNzRiMzY3YmQ4MmM3MzNjLnRhci5neiJ9XX0=", "signature": "4/RL+179scDPSEsXDM3f2mX8Fj8="}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/cache?tarballname=e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz&subresource=upload&objecttype=sandbox HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 121
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [121 bytes data]
+* upload completely sent off: 121 out of 121 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:34:00 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 515
+< Vary: Accept-Encoding,Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "a2e4f66566e157d18d55c259304e48d25973a37e"
+< X-Rest-Time: 14617.920 us
+< CMS-Server-Time: D=38965 t=1646238840259803
+< 
+{ [5 bytes data]
+100   636  100   515  100   121   6358   1493 --:--:-- --:--:-- --:--:--  7950
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ "https://s3.cern.ch/crabcache_prod"
+,{"key": "bdanzi/sandboxes/e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz", "AWSAccessKeyId": "d542228b5cc74605885bd10e80fe3e8f", "policy": "eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDBaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy9lMjkyYmU1MDlkOTI3NDUwZWFjNjY1YzZjNmVhZGNkOWNiODY1MDA2NjEwNjljMDVjNzRiMzY3YmQ4MmM3MzNjLnRhci5neiJ9XX0=", "signature": "4/RL+179scDPSEsXDM3f2mX8Fj8="}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:34:00.303 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=bdanzi/sandboxes/e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz" -F "AWSAccessKeyId=d542228b5cc74605885bd10e80fe3e8f" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDBaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy9lMjkyYmU1MDlkOTI3NDUwZWFjNjY1YzZjNmVhZGNkOWNiODY1MDA2NjEwNjljMDVjNzRiMzY3YmQ4MmM3MzNjLnRhci5neiJ9XX0=" -F "signature=4/RL+179scDPSEsXDM3f2mX8Fj8=" -F "file=@/afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/6ff09785-a2c2-42ee-b6cd-a555c777a37ddefault.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2022-03-02 16:34:01.440 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2022-03-02 16:34:01.440 UTC: 	 sandbox /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/6ff09785-a2c2-42ee-b6cd-a555c777a37ddefault.tgz successully uploaded to S3
+DEBUG 2022-03-02 16:34:01.440 UTC: 	 Loading required information from the environment
+DEBUG 2022-03-02 16:34:01.440 UTC: 	 Found CMSSW_10_6_18 for slc7_amd64_gcc820 with base /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18
+DEBUG 2022-03-02 16:34:01.440 UTC: 	 Making tarball in /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/debugFiles.tgz
+DEBUG 2022-03-02 16:34:01.454 UTC: 	 Uploading archive /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/debugFiles.tgz (5 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/S3/crabcache_prod
+DEBUG 2022-03-02 16:34:01.459 UTC: 	 Encoded data for curl request: tarballname=2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz&subresource=upload&objecttype=sandbox
+DEBUG 2022-03-02 16:34:01.460 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlData3550TM --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/cache?tarballname=2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz&subresource=upload&objecttype=sandbox" | tee /dev/stderr 
+DEBUG 2022-03-02 16:34:01.555 UTC: 	 output : {"result": [
+ "https://s3.cern.ch/crabcache_prod"
+,{"key": "bdanzi/sandboxes/2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz", "AWSAccessKeyId": "d542228b5cc74605885bd10e80fe3e8f", "policy": "eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy8yY2U4ZDkwNTgxMTEyMGQwZDVjNjEzMDM5YWY3MmYyY2VlYjA3YWMyZWVjMDdkYTNjY2Y4N2VkNDMyNzYxZmMwLnRhci5neiJ9XX0=", "signature": "BkMuhXMVyY/QylaSlJgCGQEJ/Dc="}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/cache?tarballname=2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz&subresource=upload&objecttype=sandbox HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 121
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [121 bytes data]
+* upload completely sent off: 121 out of 121 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:34:01 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 515
+< Vary: Accept-Encoding,Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "7dee42db48e40440f8ffe6d3a34ebf4b92913396"
+< X-Rest-Time: 8707.285 us
+< CMS-Server-Time: D=18371 t=1646238841533178
+< 
+{ [5 bytes data]
+100   636  100   515  100   121   9716   2283 --:--:-- --:--:-- --:--:-- 12230
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ "https://s3.cern.ch/crabcache_prod"
+,{"key": "bdanzi/sandboxes/2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz", "AWSAccessKeyId": "d542228b5cc74605885bd10e80fe3e8f", "policy": "eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy8yY2U4ZDkwNTgxMTEyMGQwZDVjNjEzMDM5YWY3MmYyY2VlYjA3YWMyZWVjMDdkYTNjY2Y4N2VkNDMyNzYxZmMwLnRhci5neiJ9XX0=", "signature": "BkMuhXMVyY/QylaSlJgCGQEJ/Dc="}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:34:01.556 UTC: 	 Will execute:
+curl -f -v -X POST  -H "User-Agent: CRAB" -F "key=bdanzi/sandboxes/2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz" -F "AWSAccessKeyId=d542228b5cc74605885bd10e80fe3e8f" -F "policy=eyJleHBpcmF0aW9uIjogIjIwMjItMDMtMDJUMTc6MzQ6MDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiY3JhYmNhY2hlX3Byb2QifSwgeyJrZXkiOiAiYmRhbnppL3NhbmRib3hlcy8yY2U4ZDkwNTgxMTEyMGQwZDVjNjEzMDM5YWY3MmYyY2VlYjA3YWMyZWVjMDdkYTNjY2Y4N2VkNDMyNzYxZmMwLnRhci5neiJ9XX0=" -F "signature=BkMuhXMVyY/QylaSlJgCGQEJ/Dc=" -F "file=@/afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/debugFiles.tgz" "https://s3.cern.ch/crabcache_prod"
+DEBUG 2022-03-02 16:34:02.618 UTC: 	 exitcode: 0
+stdout: 
+DEBUG 2022-03-02 16:34:02.618 UTC: 	 sandbox /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/inputs/debugFiles.tgz successully uploaded to S3
+DEBUG 2022-03-02 16:34:02.618 UTC: 	 Result uploading input files: e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz 
+INFO 2022-03-02 16:34:02.619 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2022-03-02 16:34:02.619 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'lfn': '/store/user/bdanzi/TnP_ntuples/muon/Z/Run2018/AOD', 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_IT_Bari', 'algoargs': 100, 'cachefilename': 'e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_6_18', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1/AODSIM', 'ignorelocality': 0, 'dryrun': 0, 'workflow': 'crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph', 'cacheurl': u'https://cmsweb.cern.ch/S3/crabcache_prod', 'nonprodsw': 1, 'tfileoutfiles': ['output_full_Z_mc.root'], 'oneEventMode': 0, 'debugfilename': '2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc7_amd64_gcc820', 'totalunits': 0, 'splitalgo': 'LumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 1, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'publishname2': '', 'jobtype': 'Analysis'} 
+DEBUG 2022-03-02 16:34:02.619 UTC: 	 Encoded submit request: maxjobruntime=1250&lfn=%2Fstore%2Fuser%2Fbdanzi%2FTnP_ntuples%2Fmuon%2FZ%2FRun2018%2FAOD&savelogsflag=1&useparent=0&asyncdest=T2_IT_Bari&algoargs=100&cachefilename=e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_6_18&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8%2FRunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1%2FAODSIM&ignorelocality=0&dryrun=0&workflow=crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2FS3%2Fcrabcache_prod&nonprodsw=1&oneEventMode=0&debugfilename=2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz&saveoutput=1&publication=0&jobarch=slc7_amd64_gcc820&totalunits=0&splitalgo=LumiBased&ignoreglobalblacklist=0&nonvaliddata=1&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&publishname2=&jobtype=Analysis&tfileoutfiles=output_full_Z_mc.root
+DEBUG 2022-03-02 16:34:02.619 UTC: 	 Encoded data for curl request: maxjobruntime=1250&lfn=%2Fstore%2Fuser%2Fbdanzi%2FTnP_ntuples%2Fmuon%2FZ%2FRun2018%2FAOD&savelogsflag=1&useparent=0&asyncdest=T2_IT_Bari&algoargs=100&cachefilename=e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_6_18&primarydataset=&inputdata=%2FDYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8%2FRunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1%2FAODSIM&ignorelocality=0&dryrun=0&workflow=crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2FS3%2Fcrabcache_prod&nonprodsw=1&oneEventMode=0&debugfilename=2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz&saveoutput=1&publication=0&jobarch=slc7_amd64_gcc820&totalunits=0&splitalgo=LumiBased&ignoreglobalblacklist=0&nonvaliddata=1&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&publishname2=&jobtype=Analysis&tfileoutfiles=output_full_Z_mc.root
+DEBUG 2022-03-02 16:34:02.640 UTC: 	 Executing command :
+ curl -v -X PUT -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlDatahPkyLj --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/workflow" | tee /dev/stderr 
+DEBUG 2022-03-02 16:34:02.723 UTC: 	 output : {"result": [
+ {"RequestName": "220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph"}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> PUT /crabserver/prod/workflow HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 1077
+> Content-Type: application/x-www-form-urlencoded
+> Expect: 100-continue
+> 
+{ [5 bytes data]
+< HTTP/1.1 100 Continue
+} [5 bytes data]
+* We are completely uploaded and fine
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:34:02 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 107
+< Vary: Accept
+< X-Rest-Status: 100
+< Etag: "0ecb34485a5c7a891d60f7178a314299d4bf5716"
+< X-Rest-Time: 11339.664 us
+< CMS-Server-Time: D=23816 t=1646238842695902
+< 
+ 90  1184    0     0  100  1077      0  19944 --:--:-- --:--:-- --:--:-- 19581{ [5 bytes data]
+100  1184  100   107  100  1077   1981  19944 --:--:-- --:--:-- --:--:-- 21527
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"RequestName": "220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph"}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:34:02.724 UTC: 	 Result: {u'result': [{u'RequestName': u'220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph'}]}
+INFO 2022-03-02 16:34:02.729 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2022-03-02 16:34:02.729 UTC: 	 Task name: 220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+INFO 2022-03-02 16:34:02.729 UTC: 	 Project dir: TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+INFO 2022-03-02 16:34:02.729 UTC: 	 Please use ' crab status -d TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph ' to check how the submission process proceeds.
+DEBUG 2022-03-02 16:34:02.729 UTC: 	 About to return
+DEBUG 2022-03-02 16:43:53.468 UTC: 	 CRAB Client version: v3.220210
+DEBUG 2022-03-02 16:43:53.468 UTC: 	 Running on: Linux lxplus737.cern.ch 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2022-03-02 16:43:53.468 UTC: 	 Executing command: 'status'
+DEBUG 2022-03-02 16:43:53.468 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bdanzi/.crab3
+ERROR 2022-03-02 16:43:53.469 UTC: 	 Error: TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph is not a valid CRAB project directory.
+ERROR 2022-03-02 16:43:53.469 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/bin/crab.py", line 162, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/bin/crab.py", line 147, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/SubCommand.py", line 275, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/SubCommand.py", line 642, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph is not a valid CRAB project directory.
+INFO 2022-03-02 16:43:53.472 UTC: 	 Log file is /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/crab.log
+DEBUG 2022-03-02 16:44:11.781 UTC: 	 CRAB Client version: v3.220210
+DEBUG 2022-03-02 16:44:11.781 UTC: 	 Running on: Linux lxplus737.cern.ch 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2022-03-02 16:44:11.781 UTC: 	 Executing command: 'status'
+DEBUG 2022-03-02 16:44:11.781 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bdanzi/.crab3
+ERROR 2022-03-02 16:44:11.782 UTC: 	 Error: TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph is not a valid CRAB project directory.
+ERROR 2022-03-02 16:44:11.782 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/bin/crab.py", line 162, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/bin/crab.py", line 147, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/status.py", line 48, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/SubCommand.py", line 275, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/v3.220210.00/lib/CRABClient/Commands/SubCommand.py", line 642, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph is not a valid CRAB project directory.
+INFO 2022-03-02 16:44:11.785 UTC: 	 Log file is /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/crab.log
+DEBUG 2022-03-02 16:44:32.537 UTC: 	 CRAB Client version: v3.220210
+DEBUG 2022-03-02 16:44:32.537 UTC: 	 Running on: Linux lxplus737.cern.ch 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2022-03-02 16:44:32.537 UTC: 	 Executing command: 'status'
+DEBUG 2022-03-02 16:44:32.537 UTC: 	 Found CRAB cache file /afs/cern.ch/user/b/bdanzi/.crab3
+DEBUG 2022-03-02 16:44:32.549 UTC: 	 Checking credentials
+DEBUG 2022-03-02 16:44:32.550 UTC: 	 Found proxy file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:44:32.550 UTC: 	 Making sure it has proper VOMS extension
+DEBUG 2022-03-02 16:44:32.550 UTC: 	 Executing command :
+ voms-proxy-info --vo --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:44:33.318 UTC: 	 output : cms
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:44:33.319 UTC: 	 Getting proxy life time left
+DEBUG 2022-03-02 16:44:33.319 UTC: 	 Executing command :
+ voms-proxy-info --actimeleft --timeleft --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:44:33.954 UTC: 	 output : 685740
+685740
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:44:33.954 UTC: 	 Proxy valid for 190:29:00 hours
+DEBUG 2022-03-02 16:44:34.028 UTC: 	 Encoded data for curl request: subresource=delegatedn
+DEBUG 2022-03-02 16:44:34.030 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlDataUN0Vwu --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=delegatedn" | tee /dev/stderr 
+DEBUG 2022-03-02 16:44:34.104 UTC: 	 output : {"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=delegatedn HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 22
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [22 bytes data]
+* upload completely sent off: 22 out of 22 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:44:34 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 213
+< Vary: Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "de92dcb56f87dabbe30965e60a433c3f1b873eab"
+< X-Rest-Time: 2400.637 us
+< CMS-Server-Time: D=11718 t=1646239474086724
+< 
+{ [5 bytes data]
+100   235  100   213  100    22   4840    500 --:--:-- --:--:-- --:--:--  5340
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ {"services": ["/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch"]}
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:44:34.105 UTC: 	 Registering user credentials on myproxy for /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+DEBUG 2022-03-02 16:44:34.105 UTC: 	 Executing command :
+ voms-proxy-info --identity --file /tmp/x509up_u140802
+DEBUG 2022-03-02 16:44:34.865 UTC: 	 output : /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:44:34.865 UTC: 	 Getting myproxy life time left for 574c355a865cf1e033f1abec02e1b33de079f03d
+DEBUG 2022-03-02 16:44:34.865 UTC: 	 Executing command :
+ myproxy-info -s myproxy.cern.ch -l 574c355a865cf1e033f1abec02e1b33de079f03d
+DEBUG 2022-03-02 16:44:35.162 UTC: 	 output : username: 574c355a865cf1e033f1abec02e1b33de079f03d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=stefanov(m|m2).cern.ch|/DC=ch/DC=cern/OU=computers/CN=dciangot-tw.cern.ch
+  timeleft: 691:30:36  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2022-03-02 16:44:35.162 UTC: 	 Myproxy is valid: 2489400
+DEBUG 2022-03-02 16:44:35.163 UTC: 	 Result of myproxy credential check:
+  Credential exists on myproxy: username: 574c355a865cf1e033f1abec02e1b33de079f03d  - validity: 28 days, 19:30:00
+DEBUG 2022-03-02 16:44:35.165 UTC: 	 Command use: status
+DEBUG 2022-03-02 16:44:35.165 UTC: 	 Options use: ['-d', 'TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph']
+DEBUG 2022-03-02 16:44:35.165 UTC: 	 Encoded data for curl request: subresource=version
+DEBUG 2022-03-02 16:44:35.166 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlData9nena8 --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/info?subresource=version" | tee /dev/stderr 
+DEBUG 2022-03-02 16:44:35.266 UTC: 	 output : {"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "py3.220218"]
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/info?subresource=version HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 19
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [19 bytes data]
+* upload completely sent off: 19 out of 19 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:44:35 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 73
+< Vary: Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "b9e9d953ebda03e57a376ab381078e87e4cd4aa3"
+< X-Rest-Time: 2650.976 us
+< CMS-Server-Time: D=39331 t=1646239475220435
+< 
+{ [5 bytes data]
+100    92  100    73  100    19   1028    267 --:--:-- --:--:-- --:--:--  1295
+* Connection #0 to host cmsweb.cern.ch left intact
+{"result": [
+ ["3.3.19", "3.3.20", "v3", "development", "py3.220218"]
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:44:35.267 UTC: 	 CRABClient version: v3.220210
+DEBUG 2022-03-02 16:44:35.267 UTC: 	 Instance is prod
+DEBUG 2022-03-02 16:44:35.267 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2022-03-02 16:44:35.267 UTC: 	 Command api workflow
+DEBUG 2022-03-02 16:44:35.267 UTC: 	 Encoded data for curl request: subresource=search&workflow=220302_163402%3Abdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+DEBUG 2022-03-02 16:44:35.268 UTC: 	 Executing command :
+ curl -v -X GET -H "User-Agent: CRABClient/v3.220210" -H "Accept: */*" --data @/tmp/crab_curlDataof2kT0 --cert "/tmp/x509up_u140802" --key "/tmp/x509up_u140802" --capath "/etc/grid-security/certificates/" "https://cmsweb.cern.ch:8443/crabserver/prod/task?subresource=search&workflow=220302_163402%3Abdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph" | tee /dev/stderr 
+DEBUG 2022-03-02 16:44:35.347 UTC: 	 output : {"desc": {"columns": ["tm_taskname", "tm_activity", "panda_jobset_id", "tm_task_status", "tm_task_command", "tm_start_time", "tm_start_injection", "tm_end_injection", "tm_task_failure", "tm_job_sw", "tm_job_arch", "tm_input_dataset", "tm_nonvalid_input_dataset", "tm_use_parent", "tm_site_whitelist", "tm_site_blacklist", "tm_split_algo", "tm_split_args", "tm_user_sandbox", "tm_cache_url", "tm_username", "tm_user_dn", "tm_user_vo", "tm_user_role", "tm_user_group", "tm_publish_name", "tm_publish_groupname", "tm_asyncdest", "tm_dbs_url", "tm_publish_dbs_url", "tm_publication", "tm_outfiles", "tm_tfile_outfiles", "tm_edm_outfiles", "tm_job_type", "tm_generator", "tm_events_per_lumi", "tm_arguments", "panda_resubmitted_jobs", "tm_save_logs", "tw_name", "tm_user_infiles", "tm_maxjobruntime", "tm_numcores", "tm_maxmemory", "tm_priority", "tm_output_dataset", "tm_task_warnings", "tm_user_webdir", "tm_scriptexe", "tm_scriptargs", "tm_extrajdl", "tm_asourl", "tm_collector", "tm_schedd", "tm_dry_run", "tm_user_files", "tm_transfer_outputs", "tm_output_lfn", "tm_ignore_locality", "tm_fail_limit", "tm_one_event_mode", "tm_secondary_input_dataset", "tm_primary_dataset", "tm_last_publication", "tm_debug_files", "clusterid", "tm_asodb", "tm_ignore_global_blacklist", "tm_submitter_ip_addr", "tm_totalunits", "tm_ddm_reqid"]}, "result": [
+ "220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph"
+,"None"
+,"None"
+,"QUEUED"
+,"SUBMIT"
+,"2022-03-02 16:34:02.715734"
+,"None"
+,"None"
+,"None"
+,"CMSSW_10_6_18"
+,"slc7_amd64_gcc820"
+,"/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1/AODSIM"
+,"T"
+,"0"
+,"[]"
+,"[]"
+,"LumiBased"
+,"{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'lumis_per_job': 100, 'runs': [], 'lumis': []}"
+,"e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz"
+,"https://cmsweb.cern.ch/S3/crabcache_prod"
+,"bdanzi"
+,"/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi"
+,"cms"
+,"None"
+,"None"
+,"crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph-00000000000000000000000000000000"
+,"F"
+,"T2_IT_Bari"
+,"https://cmsweb.cern.ch/dbs/prod/global/DBSReader"
+,"https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter"
+,"F"
+,"[]"
+,"['output_full_Z_mc.root']"
+,"[]"
+,"Analysis"
+,"pythia"
+,"None"
+,"{}"
+,"None"
+,"T"
+,"crab-prod-tw01"
+,"[]"
+,"1250"
+,"1"
+,"2000"
+,"10"
+,"None"
+,"[]"
+,"None"
+,"None"
+,"[]"
+,"[]"
+,"https://cmsweb.cern.ch/crabserver/prod"
+,"cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"
+,"None"
+,"F"
+,"[]"
+,"T"
+,"/store/user/bdanzi/TnP_ntuples/muon/Z/Run2018/AOD"
+,"F"
+,"None"
+,"F"
+,"None"
+,"DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8"
+,"None"
+,"2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz"
+,"None"
+,"filetransfers"
+,"F"
+,"137.138.120.6"
+,"0.0"
+,"None"
+]}
+
+ error:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 137.138.120.6...
+* TCP_NODELAY set
+* Connected to cmsweb.cern.ch (137.138.120.6) port 8443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: /etc/grid-security/certificates/
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [109 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [6199 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+{ [13495 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+} [6691 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS handshake, CERT verify (15):
+} [264 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: DC=ch; DC=cern; OU=computers; CN=cmsweb.cern.ch
+*  start date: Feb 17 13:05:12 2022 GMT
+*  expire date: Mar 24 13:05:12 2023 GMT
+*  subjectAltName: host "cmsweb.cern.ch" matched cert's "cmsweb.cern.ch"
+*  issuer: DC=ch; DC=cern; CN=CERN Grid Certification Authority
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /crabserver/prod/task?subresource=search&workflow=220302_163402%3Abdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph HTTP/1.1
+> Host: cmsweb.cern.ch:8443
+> User-Agent: CRABClient/v3.220210
+> Accept: */*
+> Content-Length: 100
+> Content-Type: application/x-www-form-urlencoded
+> 
+} [100 bytes data]
+* upload completely sent off: 100 out of 100 bytes
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Date: Wed, 02 Mar 2022 16:44:35 GMT
+< Server: nginx/1.17.10
+< Content-Type: application/json
+< Content-Length: 2868
+< Vary: Accept-Encoding,Accept
+< Cache-Control: max-age=3600
+< X-Rest-Status: 100
+< Etag: "4255c34b70e49fa8f79adb3b41fa401c0b45e9a9"
+< X-Rest-Time: 12548.923 us
+< CMS-Server-Time: D=22009 t=1646239475321641
+< 
+{ [5 bytes data]
+100  2968  100  2868  100   100  55153   1923 --:--:-- --:--:-- --:--:-- 57076
+* Connection #0 to host cmsweb.cern.ch left intact
+{"desc": {"columns": ["tm_taskname", "tm_activity", "panda_jobset_id", "tm_task_status", "tm_task_command", "tm_start_time", "tm_start_injection", "tm_end_injection", "tm_task_failure", "tm_job_sw", "tm_job_arch", "tm_input_dataset", "tm_nonvalid_input_dataset", "tm_use_parent", "tm_site_whitelist", "tm_site_blacklist", "tm_split_algo", "tm_split_args", "tm_user_sandbox", "tm_cache_url", "tm_username", "tm_user_dn", "tm_user_vo", "tm_user_role", "tm_user_group", "tm_publish_name", "tm_publish_groupname", "tm_asyncdest", "tm_dbs_url", "tm_publish_dbs_url", "tm_publication", "tm_outfiles", "tm_tfile_outfiles", "tm_edm_outfiles", "tm_job_type", "tm_generator", "tm_events_per_lumi", "tm_arguments", "panda_resubmitted_jobs", "tm_save_logs", "tw_name", "tm_user_infiles", "tm_maxjobruntime", "tm_numcores", "tm_maxmemory", "tm_priority", "tm_output_dataset", "tm_task_warnings", "tm_user_webdir", "tm_scriptexe", "tm_scriptargs", "tm_extrajdl", "tm_asourl", "tm_collector", "tm_schedd", "tm_dry_run", "tm_user_files", "tm_transfer_outputs", "tm_output_lfn", "tm_ignore_locality", "tm_fail_limit", "tm_one_event_mode", "tm_secondary_input_dataset", "tm_primary_dataset", "tm_last_publication", "tm_debug_files", "clusterid", "tm_asodb", "tm_ignore_global_blacklist", "tm_submitter_ip_addr", "tm_totalunits", "tm_ddm_reqid"]}, "result": [
+ "220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph"
+,"None"
+,"None"
+,"QUEUED"
+,"SUBMIT"
+,"2022-03-02 16:34:02.715734"
+,"None"
+,"None"
+,"None"
+,"CMSSW_10_6_18"
+,"slc7_amd64_gcc820"
+,"/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1/AODSIM"
+,"T"
+,"0"
+,"[]"
+,"[]"
+,"LumiBased"
+,"{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'lumis_per_job': 100, 'runs': [], 'lumis': []}"
+,"e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz"
+,"https://cmsweb.cern.ch/S3/crabcache_prod"
+,"bdanzi"
+,"/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi"
+,"cms"
+,"None"
+,"None"
+,"crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph-00000000000000000000000000000000"
+,"F"
+,"T2_IT_Bari"
+,"https://cmsweb.cern.ch/dbs/prod/global/DBSReader"
+,"https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter"
+,"F"
+,"[]"
+,"['output_full_Z_mc.root']"
+,"[]"
+,"Analysis"
+,"pythia"
+,"None"
+,"{}"
+,"None"
+,"T"
+,"crab-prod-tw01"
+,"[]"
+,"1250"
+,"1"
+,"2000"
+,"10"
+,"None"
+,"[]"
+,"None"
+,"None"
+,"[]"
+,"[]"
+,"https://cmsweb.cern.ch/crabserver/prod"
+,"cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620"
+,"None"
+,"F"
+,"[]"
+,"T"
+,"/store/user/bdanzi/TnP_ntuples/muon/Z/Run2018/AOD"
+,"F"
+,"None"
+,"F"
+,"None"
+,"DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8"
+,"None"
+,"2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz"
+,"None"
+,"filetransfers"
+,"F"
+,"137.138.120.6"
+,"0.0"
+,"None"
+]}
+
+ retcode : 0
+DEBUG 2022-03-02 16:44:35.347 UTC: 	 Got information from server oracle database: {u'result': [u'220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph', u'None', u'None', u'QUEUED', u'SUBMIT', u'2022-03-02 16:34:02.715734', u'None', u'None', u'None', u'CMSSW_10_6_18', u'slc7_amd64_gcc820', u'/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18RECO-106X_upgrade2018_realistic_v11_L1v1-v1/AODSIM', u'T', u'0', u'[]', u'[]', u'LumiBased', u"{'halt_job_on_file_boundaries': False, 'splitOnRun': False, 'lumis_per_job': 100, 'runs': [], 'lumis': []}", u'e292be509d927450eac665c6c6eadcd9cb86500661069c05c74b367bd82c733c.tar.gz', u'https://cmsweb.cern.ch/S3/crabcache_prod', u'bdanzi', u"/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=bdanzi/CN=852212/CN=Brunella D'Anzi", u'cms', u'None', u'None', u'crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph-00000000000000000000000000000000', u'F', u'T2_IT_Bari', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['output_full_Z_mc.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'None', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'None', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov:9620', u'None', u'F', u'[]', u'T', u'/store/user/bdanzi/TnP_ntuples/muon/Z/Run2018/AOD', u'F', u'None', u'F', u'None', u'DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8', u'None', u'2ce8d905811120d0d5c613039af72f2ceeb07ac2eec07da3ccf87ed432761fc0.tar.gz', u'None', u'filetransfers', u'F', u'137.138.120.6', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2022-03-02 16:44:35.348 UTC: 	 CRAB project directory:		/afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+INFO 2022-03-02 16:44:35.348 UTC: 	 Task name:			220302_163402:bdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+INFO 2022-03-02 16:44:35.348 UTC: 	 Grid scheduler - Task Worker:	N/A yet - crab-prod-tw01
+INFO 2022-03-02 16:44:35.348 UTC: 	 Status on the CRAB server:	QUEUED on command SUBMIT
+INFO 2022-03-02 16:44:35.348 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/220302_163402%3Abdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph
+INFO 2022-03-02 16:44:35.359 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=bdanzi&var-task=220302_163402%3Abdanzi_crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph&from=1646235242000&to=now
+DEBUG 2022-03-02 16:44:35.360 UTC: 	 The task has not been submitted to the Grid scheduler yet. Not printing job information.
+INFO 2022-03-02 16:44:35.362 UTC: 	 Log file is /afs/cern.ch/user/b/bdanzi/TRKPOG_last/CMSSW_10_6_18/src/MuonAnalysis/MuonAnalyzer/scripts/TagProbe/crab_TnP_ntuplizer_muon_Z_Run2018_AOD_DY_madgraph/crab.log
